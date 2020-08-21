@@ -13,10 +13,14 @@
 </script>
 
 	<meta name="viewport" content="width=device-width, height=device-height" />
- <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
+.material-icons {
+	font-size:1em;
+}
+
 html, body {
 	padding:0;
 	margin:0;
@@ -24,16 +28,22 @@ html, body {
 	color:rgb(33, 40, 50);
 }
 
+body {
+	max-width:800px;
+	margin:0 auto 0 auto;
+}
+
 h1 {
 	padding:0;
-	margin:0 0 40px 0;
+	margin:0;
 	color:#ffffff;
-	font-size:2.5em;
+	font-size:2em;
 }
 
 h2 {
-	font-size:2em;
-	margin:0 0 10px 0;
+	font-size:1.5em;
+	margin:0 0 0;
+	text-align:center;
 }
 
 h3 {
@@ -41,35 +51,55 @@ h3 {
 	margin:0 0 10px 0;
 }
 .baner {
-	width:100%;
 	margin:0 auto 0 auto;
-	padding:20px;
+	padding:10px;
 	box-sizing:border-box;
 	color:rgb(18, 100, 163);
 	font-weight:bold;
-	font-size:1.5em;
+	font-size:1.1em;
+	
 	
 }
 .baner > div {
 	max-width:800px;
 	margin:0 auto 0 auto;
-	display:flex;
-	flex-direction:row;
-	align-items:center;
+	text-align:center;
 }
 
 .hero {
-	width:100%;
-	background:rgb(33, 41, 50);
-	margin:0 auto 20px auto;
-	padding:40px;
+	width:calc(100% - 20px);
+	border-radius:5px;
+	background:rgba(33, 41, 50);
+	__background-image:url(bg.jpg);
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+	margin:0 auto 0 auto;
+	padding:20px;
 	text-align:center;
 	box-sizing:border-box;
 }
 
+.subhero {
+	margin:0 auto 20px auto;
+	padding:10px 20px 10px 20px;
+	background:#F0F0F0;
+	text-align:center;
+	width:calc(100% - 60px);
+	box-sizing:border-box;
+	color:#333350;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+}
+.subhero > div {
+	max-width:800px;
+	margin:0 auto 0 auto;
+	
+}
 .hero > div {
 	max-width:800px;
 	margin:0 auto 0 auto;
+	
 }
 
 .hero p {
@@ -86,74 +116,83 @@ h3 {
 	color:rgb(190,190,190);
 }
 
-.cta {
-	width:100%;
-	margin:0 auto 0 auto;
-	padding:20px;
-	box-sizing:border-box;
-}
 
 form {
-	max-width:800px;
-	margin:0 auto 30px auto;
-	text-align:center;
-	display:flex;
-	flex-direction:row;
-	flex-wrap:wrap;
+	max-width: 800px;
+	margin: 0 auto 0 auto;
+	text-align: center;
+
 }
 
 .form-text {
-	border:2px solid rgb(231, 233, 237);
+	border:2px solid #074672;
 	border-radius:4px;
 	background:#ffffff;
 	color:rgb(33, 40, 50);
 	padding:10px;
 	font-size:1em;
-	margin-right:10px;
-	margin:2px 0 0 0;
-	flex:1 1;
+	margin-bottom:10px;
+	box-sizing:border-box;
+	width:100%;
+	text-align:center;
+
 }
 
 .form-submit {
-	background:rgb(88, 167, 0);
-	font-size:1em;		
-	border-radius:4px;
-	color:#ffffff;
-	padding:10px;
-	border:2px solid rgb(88, 167, 0);
-	cursor:pointer;
-	margin:2px 0 0 0;
-	flex:0 0 auto;
-	font-weight:bold;
-}
-
-.form-submit:hover{
-	background:rgb(88, 167, 0, 0.8);
-	border-color:rgb(88, 167, 0, 0.8);
+	background: #7CB342;
+	font-size: 1em;
+	border-radius: 4px;
+	color: #ffffff;
+	padding: 10px;
+	border: 2px solid #558B2F;
+	cursor: pointer;
+	width: 100%;
+	font-weight: bold;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .content {
-	width:100%;
-	margin:0 auto 0 auto;
-	padding:40px 20px 0px 20px;
+	width:calc(100% - 20px);
+	margin:0 auto 10px auto;
+	padding:20px 0 0px 0;
 	box-sizing:border-box;
-	border-top:2px solid #DEDEDE;
+	border-top:2px solid #EAEAEA;
+}
+
+.content.first {
+	border-top:none;
+
 }
 
 .content > .row {
 	max-width:800px;
-	margin:0 auto 40px auto;
+	margin:0 auto 10px auto;
 	display:flex;
 	flex-direction:row;
 	align-items:center;
 }
 
-.content .row p {
+.content > .column {
+	max-width:800px;
+	margin:0 auto 0 auto;
+	display:flex;
+	flex-direction:column;
+	align-items:stretch;
+}
+
+.content > .column > *:not(:first-child) {
+	margin-top:5px;
+}
+
+p {
 	color:#999999;
+}
+.content .row p {
+	
 	margin:5px 0 5px 0;
 }
 
-.content .material-icons {
+.row > .material-icons {
 	margin:0 20px 0 0;
 	color:rgb(18, 100, 163);
 	font-size:4em;
@@ -165,6 +204,84 @@ form {
 	padding:0 4px 0 4px;
 	border-radius:4px;
 }
+
+
+
+.card {
+	padding:20px;
+	border: 1px solid #dddddd;
+	border-radius:5px;
+	flex-direction:column;
+	justify-content:center;
+	margin:0;
+	background:#F8F8F8;
+	flex:1 1 auto;
+}
+
+.card h3 {
+	display:flex;
+	align-items:center;
+	margin:0;
+}
+
+.card h3 .material-icons {
+	margin-right:5px;
+}
+
+.card p {
+	margin: 10px 0 10px 0 !important;
+}
+
+.card > span {
+
+	display:flex;
+	align-items:center;
+
+}
+
+.card > span > span {
+	margin-right:5px;
+}
+
+.card-locked {
+	filter:blur(3px) grayscale(0.2);
+}
+
+.card-list {
+	display:flex;
+	flex-direction:column;
+	flex-wrap:wrap;
+}
+
+
+a{
+
+	border:2px solid #107c42;
+	border:2px solid rgb(13, 118, 190);
+	background:rgb(17, 156, 255);
+	padding:10px;
+	border-radius:5px;
+	margin:2px 0 0 0;
+	color:#ffffff;
+	font-weight:500;
+	box-shadow:0 3px 1px #DFDFDF;
+	display:inline-flex;
+	align-items:center;
+	user-select: none;
+	cursor:pointer;
+
+}
+
+a:hover {
+	border:2px solid rgb(13, 118, 190);
+	margin:0 0 2px 0;
+	box-shadow:0 5px 2px #DDDDDD;
+}
+
+a > .button-image {
+	margin-right:10px;
+}
+
 </style>
 <title>Excelanto | La meilleure façon d'apprendre les formules Excel</title>
 </head>
@@ -176,89 +293,62 @@ form {
 	</div>
 	<div class="hero">
 		<div>
-		
-		<h1>Devenez un pro des formules Excel.</h1>
-		<p>Les fonctions <code>RECHERCHEV</code> et <code>NB.SI</code> n'auront bientôt plus de secret pour vous !</p>
-		
+		<h1>Devenez un pro des formules Excel</h1>
 		</div>
 	</div>
-
-	<div class="cta">
+	<div class="subhero">
+		<div>Je vous propose des exercices clairs et pratiques pour que vous progressiez rapidement sur Excel.</div>
+	</div>
+	<div class="hero" style="background:rgb(13, 118, 190);">
 		<form action="https://pourriel.us17.list-manage.com/subscribe/post?u=8d9a6bf79c37e574f005cc98b&amp;id=5980409147" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+			<h1>Votre premier exercice gratuit</h1>
 			<input class="form-text" placeholder="Saisissez votre adresse e-mail" type="email" value="" name="EMAIL" id="mce-EMAIL" required />
-			<input class="form-submit" type="submit" value="Je veux maîtriser les formules Excel" />
+			<input class="form-submit" type="submit" value="Obtenir mon premier exercice" />
+		<p style="font-size:1em;color:#ffffff;">Dans ce premier exercice, vous réviserez les bases d'Excel et créerez vos premières formules.</p>
 		</form>
 	</div>
 
-	<div class="content">
+	<div class="content first">
 		<div class="row">
-			<h2>Comment ça marche ?</h2>
-		</div>
-		<div class="row">
-			<span class="material-icons">face</span>
-			<div>
-				<h3>1. Vous sélectionnez un parcours</h3>
-				<p>Vous choisissez un profil qui vous ressemble et nous vous proposons des exercices qui vous sont réellement utiles.</p>
-			</div>
-		</div>
-
-		<div class="row">
-			<span class="material-icons">functions</span>
-			<div>
-				<h3>2. Vous passez à la pratique</h3>
-				<p>Vous réalisez nos exercices directement dans votre navigateur web, en suivant les instructions de votre coach virtuel. Pas même besoin d'avoir Excel sur votre ordinateur !</p>
-			</div>
-		</div>
-		
-		<div class="row">
-			<span class="material-icons">update</span>
-			<div>
-				<h3>3. Vous progressez à votre rythme</h3>
-				<p>Vous décidez quand vous vous entrainez, et pour combien de temps. A tout moment vous pouvez reprendre là ou vous vous êtes arrêté.</p>
-			</div>
-		</div>
-	</div>
-
-	<div class="content">
-		<div class="row">
-			<h2>Pourquoi apprendre avec Excelanto ?</h2>
-		</div>
-		<div class="row">
-			<span class="material-icons">engineering</span>
-			<div>
-				<h3>Vous apprenez en faisant</h3>
-				<p>En 2020, qui a encore envie de consulter un manuel de 400 pages pour apprendre à utiliser les formules ? Nos exercices sont concrets et réalistes. On ne vous fera pas calculer la durée du voyage Terre/Mars d'un proton, promis !</p>
-			</div>
-		</div>
-		<div class="row">
-			<span class="material-icons">map</span>
-			<div>
-				<h3>Vous êtes guidé</h3>
-				<p>Il faut une sacrée dose de courage pour attaquer seul une <code>SOMME.SI.ENS</code>. Avec Excelanto, vous suivez les consignes de votre coach virtuel. Et si vous êtes coincé, il vous donne des indices !</p>
-			</div>
+			<h2>Un programme progressif</h2>
 		</div>
 		<div class="row">
 			<span class="material-icons">trending_up</span>
-			<div>
-				<h3>Vous progressez rapidement</h3>
-				<p>Vous commencez à être opérationnel dès les premiers exercices. En quelques heures vous épaterez vos collègues !</p>
-			</div>
+			<p>J'ai conçu ces exercices Excel pour que vous puissiez progresser à votre rythme : en partant des bases vous allez progressivement combiner les différentes notions pour réaliser toutes les formules dont vous avez besoin.</p>
 		</div>
 	</div>
 
-	<div class="content">
+
+	<div class="content first">
 		<div class="row">
-			<h2>Devenez un pro !</h2>
+			<h2>Des exercices pratiques</h2>
 		</div>
-		<form action="https://pourriel.us17.list-manage.com/subscribe/post?u=8d9a6bf79c37e574f005cc98b&amp;id=5980409147" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-			<input class="form-text" placeholder="Saisissez votre adresse e-mail" type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required />
-			<input class="form-submit" type="submit" value="Je veux maîtriser les formules Excel" />
-		</form>
-		
+		<div class="row">
+			<span class="material-icons">engineering</span>
+			<p>Je considère que pour apprendre les formules Excel il faut pratiquer, pas lire un manuel de 400 pages... Excelanto ce sont des exercices que vous ferez directement dans Microsoft Excel, sur votre ordinateur.</p>
+		</div>
 	</div>
-	<div class="content" style="text-align:center;margin:60px auto 0 auto;padding-bottom:40px;color:#999999;font-size:1em;background:#F3F3F3;">
-		<img src="profil1.png" style="padding-bottom:10px;" />
-		<div><span>Excelanto est créé avec ❤ à Nantes</span></div>
+	
+	<div class="hero" style="background:rgb(13, 118, 190);">
+		<form action="https://pourriel.us17.list-manage.com/subscribe/post?u=8d9a6bf79c37e574f005cc98b&amp;id=5980409147" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+			<h1>Devenez un pro !</h1>
+			<input class="form-text" placeholder="Saisissez votre adresse e-mail" type="email" value="" name="EMAIL" id="mce-EMAIL" required />
+			<input class="form-submit" type="submit" value="Obtenir mon premier exercice" />
+		</form>
+	</div>
+
+	<div class="content first">
+		<div class="row">
+			<h2>A propos de moi</h2>
+		</div>
+		<div class="column">
+			<img src="photo.png" width="64" height="64" style="border-radius:50%;align-self:center;" />
+			<p>Je m'appelle Thomas et je travaille depuis 8 ans dans l'aéronautique.</p>
+			<p>Chez Airbus ma maîtrise d'Excel a fait de moi celui qu'on vient voir quand on a un problème de formules, de tableau croisé dynamique, de macro...</p>
+			<p>J'ai créé Excelanto pour diffuser cette connaissance. En maîtrisant Excel vous gagnerez du temps au quotidien et vous identifierez de nouvelles opportunités.</p>
+			<p>A très vite !</p>
+			<p>&mdash;Thomas</p>
+		</div>
 	</div>
 
 </body>
