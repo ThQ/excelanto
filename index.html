@@ -2,15 +2,7 @@
 <html lang="fr">
 
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175063798-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-175063798-1');
-</script>
 
 	<meta name="viewport" content="width=device-width, height=device-height" />
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet"> 
@@ -38,7 +30,7 @@
 		<div>Des exercices clairs et pratiques pour progresser rapidement sur Excel.</div>
 	</div>
 	<div class="hero" style="background:rgb(13, 118, 190);">
-		<form action="https://pourriel.us17.list-manage.com/subscribe/post?u=8d9a6bf79c37e574f005cc98b&amp;id=5980409147" method="post" name="mc-embedded-subscribe-form" class="validate" novalidate>
+		<form onsubmit="javascript:gtag_report_conversion();" action="https://pourriel.us17.list-manage.com/subscribe/post?u=8d9a6bf79c37e574f005cc98b&amp;id=5980409147" method="post" name="mc-embedded-subscribe-form" class="validate" novalidate>
 			<h1>Votre premier exercice gratuit</h1>
 			<input class="form-text" placeholder="Saisissez votre adresse e-mail" type="email" value="" name="EMAIL" id="mce-EMAIL" required />
 			<input class="form-submit" type="submit" value="Obtenir mon premier exercice" />
@@ -68,7 +60,7 @@
 	</div>
 	
 	<div class="hero" style="background:rgb(13, 118, 190);">
-		<form action="https://pourriel.us17.list-manage.com/subscribe/post?u=8d9a6bf79c37e574f005cc98b&amp;id=5980409147" method="post" name="mc-embedded-subscribe-form" class="validate" novalidate>
+		<form onsubmit="javascript:gtag_report_conversion();" action="https://pourriel.us17.list-manage.com/subscribe/post?u=8d9a6bf79c37e574f005cc98b&amp;id=5980409147" method="post" name="mc-embedded-subscribe-form" class="validate" novalidate>
 			<h1>Devenez un pro !</h1>
 			<input class="form-text" placeholder="Saisissez votre adresse e-mail" type="email" value="" name="EMAIL" id="mce-EMAIL" required />
 			<input class="form-submit" type="submit" value="Obtenir mon premier exercice" />
@@ -88,6 +80,28 @@
 			<p>&mdash;Thomas</p>
 		</div>
 	</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175063798-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-175063798-1');
+gtag('config', 'AW-1016841102');
+
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-1016841102/nzDUCOb4v9wBEI6H7-QD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 </body>
 </html>
